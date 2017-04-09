@@ -58,7 +58,7 @@ impl<D> DoubleEndedIterator for IntoIter<D> where D: Dimension {
 
 #[cfg(test)]
 mod tests {
-    use types::{Range2, Range3};
+    use ::{Range2, Range3};
 
 
     #[test]

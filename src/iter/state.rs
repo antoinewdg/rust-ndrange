@@ -2,11 +2,19 @@ use ndarray::{Dimension};
 
 use types::NdRange;
 
+/// The state of an iterator.
+///
+/// This exists to enable code reuse between the sequential
+/// and parallel iterators.
 #[derive(Clone)]
 pub struct IterState<D> {
+    /// The range that is iterated over
     pub range: NdRange<D>,
+    /// The current element
     pub head: D,
+    /// The element at the back (needed for `DoubleEndedIterator`)
     pub tail: D,
+    /// The number of elements between `head` and `tail`
     pub len: usize
 }
 
@@ -89,7 +97,7 @@ mod tests {
     use ndarray::IntoDimension;
 
     use super::*;
-    use types::{Range3};
+    use ::Range3;
     use iter::sequential::into_iter_from_state;
 
     #[test]

@@ -85,7 +85,7 @@ impl<D> IntoParallelIterator for NdRange<D> where D: Dimension, D::Pattern: Send
 #[cfg(test)]
 mod tests {
     use rayon::prelude::*;
-    use types::{Range3};
+    use ::Range3;
 
 
     #[test]
