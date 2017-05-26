@@ -5,4 +5,4 @@ authors = ["antoinewdg <antoinewendlinger@gmail.com>"]
 
 [dependencies]
 rayon = "0.7"
-ndarray = "0.8"
+ndarray = "0.9"
